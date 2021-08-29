@@ -11,7 +11,8 @@ days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sun
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to specify a city, month, and day to analyze. There are exception statments
+    to catch invalid user input that repeats until proper input is provided by the user. 
 
     Returns:
         (str) city - name of the city to analyze
