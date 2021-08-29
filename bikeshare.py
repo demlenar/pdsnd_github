@@ -24,16 +24,18 @@ def get_filters():
 
     city = input('\nWhat city would you like to see? (Options:New York City,'
     ' Chicago, or Washington) ').lower()
-    while city != 'chicago' and city != 'new york city' and city != 'washington':
+    while city not in CITY_DATA:
         print('\nThe options are only Chicago, New York City,\n or Washington, please'
         ' enter one of those locations to continue...\n')
         city = input('\nWhat city would you like to see? ').lower()
+
     month = input('Which month between January and June? (you can say all!) ').lower()
     while month not in months and month != 'all':
         print('\nThe options are only months between January and June, or you can'
          ' enter ''all'' to see the total data.  Please enter one of these options'
          ' to continue...\n')
         month = input('Which month between January and June? (you can say all!) ').lower()
+
     day = input('Which day? (you can say all!) ').lower()
     while day not in days and day != 'all':
         print('\nThe options are days of the week (Sunday through Saturday), or you can'
